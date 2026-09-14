@@ -1407,7 +1407,7 @@ function openEdit(key){
   editKey=key;const w=workouts[key];editDraft=w?.muscles?[...w.muscles]:[];
   document.getElementById("edit-dl").textContent=fmtF(key);
   document.getElementById("edit-notes").value=w?.notes||"";
-  document.getElementById("edit-del").style.display=workouts[key]?"block":"none";
+  document.getElementById("edit-del").style.display="block"; // always show for existing workouts
   document.getElementById("edit-del-confirm").style.display="none";
   document.getElementById("edit-del-cancel").style.display="none";
   document.getElementById("edit-pair").style.display="none";
